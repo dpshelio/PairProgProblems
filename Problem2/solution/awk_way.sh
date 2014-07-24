@@ -1,0 +1,1 @@
+ awk -F "," '{a=""; for (i=NF;i>0;i--){a = (i==10)?$i:(a","$i)}; if (a != $0){print $0}}' problem.dat| wc -l
